@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<div class="panel" ng-show="panels.isSelected(3)">
+  <ul>
+    <h4>Reviews</h4>
+    <li ng-repeat="review in product.reviews">
+      <blockquote>
+        <b>Stars: {{review.stars}}</b>
+        {{review.body}}
+        <cite class="clearfix">by: {{review.author}} on {{review.createdOn | date:'d MMMM yyyy @ H:mm:ss'}}</cite>
+      </blockquote>
+    </li>
+  </ul>
+
+  <review-form></review-form>
+</div>
